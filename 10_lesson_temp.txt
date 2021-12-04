@@ -1,0 +1,1 @@
+{'name': 'Barsik', 'color': 'Red', 'home': 'Village'}
