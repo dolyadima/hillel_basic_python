@@ -18,3 +18,10 @@
 # c2 = Counter()
 # c3 = Counter()
 # print(c1.objects_list)
+
+# class Singleton:
+#     def __new__(cls):
+#         if not hasattr(cls, 'obj'):
+#             obj = super(Singleton, cls).__new__(cls)
+#             cls.obj = obj
+#         return cls.obj
