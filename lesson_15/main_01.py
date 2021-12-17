@@ -29,36 +29,36 @@
 #     print(i.voice())
 
 
-import requests
-
-
-base_url = 'http://api.openweathermap.org/data/2.5/weather?'
-api_key = 'd82759ebf4a4a5ed987117c4027b9dfa'
-
-
-def get_temp_n_pres(city: str='Kharkov'):
-
-    result: str = ''
-    complete_url = base_url + 'appid=' + api_key + '&q=' + city
-    response = requests.get(complete_url)
-    r_data = response.json()
-    if r_data['cod'] != '404':
-        y = r_data['main']
-        current_t = y['temp']
-        current_p = y['pressure']
-        z = r_data['weather']
-        # weather_description = z[0]['description']
-        result = 'Celsius:' + str((round(current_t - 273.15))) + ' ' +\
-                 'Pressure:' + str(current_p)
-    else:
-        result = 'City not found.'
-
-    return result
-
-
-if __name__ == '__main__':
-    print(get_temp_n_pres())
-    print(get_temp_n_pres('London'))
+# import requests
+#
+#
+# base_url = 'http://api.openweathermap.org/data/2.5/weather?'
+# api_key = 'd82759ebf4a4a5ed987117c4027b9dfa'
+#
+#
+# def get_temp_n_pres(city: str='Kharkov'):
+#
+#     result: str = ''
+#     complete_url = base_url + 'appid=' + api_key + '&q=' + city
+#     response = requests.get(complete_url)
+#     r_data = response.json()
+#     if r_data['cod'] != '404':
+#         y = r_data['main']
+#         current_t = y['temp']
+#         current_p = y['pressure']
+#         z = r_data['weather']
+#         # weather_description = z[0]['description']
+#         result = 'Celsius:' + str((round(current_t - 273.15))) + ' ' +\
+#                  'Pressure:' + str(current_p)
+#     else:
+#         result = 'City not found.'
+#
+#     return result
+#
+#
+# if __name__ == '__main__':
+#     print(get_temp_n_pres())
+#     print(get_temp_n_pres('London'))
 
 
 # from unittest import TestCase, main
@@ -71,4 +71,3 @@ if __name__ == '__main__':
 #
 # if __name__ == '__main__':
 #     main()
-
