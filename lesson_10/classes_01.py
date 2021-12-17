@@ -16,6 +16,6 @@ print(vars(my_cat))
 
 print(f'{Cat.pows=}')
 
-file_my = open('10_lesson_temp.txt', 'w')
+file_my = open('temp_03.txt', 'w')
 print(my_cat.__dict__, file=file_my)
 file_my.close()

@@ -6,5 +6,6 @@ def test_function(function, value):
         print(f'error: "{e}" in function: "{function.__name__}"')
         return ''
 
+
 x = 123
 y = 456

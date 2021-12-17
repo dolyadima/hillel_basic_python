@@ -1,5 +1,5 @@
 from tests import test_function, x
-# from ..lesson_14_pkg1.tests_from_pkg2 import super_test
+# from ..pkg1.tests_from_pkg2 import super_test
 
 
 def temperature():
