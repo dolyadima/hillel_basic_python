@@ -42,7 +42,7 @@ class Exchanger:
 
 
 if __name__ == '__main__':
-    exchanger1 = Exchanger(r'./currency_data.txt')
+    exchanger1 = Exchanger(r'./currency_data_03.txt')
     while True:
         user_input: str = input(f'COMMAND?\n').upper()
         command: list = user_input.split()
