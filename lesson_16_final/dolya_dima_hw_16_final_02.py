@@ -1,5 +1,5 @@
 #
-# TASK 4 v1.1
+# TASK 4 v1.2
 #
 """
 DEFAULT VALUES 'currency_data_03.txt':
@@ -40,17 +40,16 @@ class Exchanger:
         else:
             return f'INVALID CURRENCY {name_cy}\n'
 
-    def make_exchange(self, want_cy, value):
+    def make_exchange(self, want_cy: str, value: float):
         if want_cy in self._currency_data.keys():
             for exist_cy in self._currency_data.keys():
                 if want_cy != exist_cy:
-                    rate: float = 0.0
                     if self._currency_data[want_cy]["RATE"] < self._currency_data[exist_cy]["RATE"]:
-                        rate = 1 / self._currency_data[exist_cy]["RATE"]
+                        rate: float = 1 / self._currency_data[exist_cy]["RATE"]
                     else:
-                        rate = self._currency_data[exist_cy]["RATE"]
+                        rate: float = self._currency_data[exist_cy]["RATE"]
                     product: float = value * rate
-                    if self._currency_data[exist_cy]["AVAILABLE"] - product >= 0:
+                    if self._currency_data[exist_cy]["AVAILABLE"] - product >= 0.0:
                         self._currency_data[exist_cy]["AVAILABLE"] -= product
                         self._currency_data[want_cy]["AVAILABLE"] += value
                         return f'{exist_cy} {product}, RATE {rate}\n'
