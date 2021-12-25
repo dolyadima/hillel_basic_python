@@ -1,0 +1,10 @@
+WARNING: seems you still have not added 'pyenv' to the load path.
+
+
+# See the README for instructions on how to set up
+# your shell environment for Pyenv.
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+
+eval "$(pyenv virtualenv-init -)"

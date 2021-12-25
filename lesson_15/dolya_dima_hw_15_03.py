@@ -2,7 +2,6 @@ import requests
 
 
 BASE_URL = 'http://api.openweathermap.org/data/2.5/weather?'
-API_KEY = 'd82759ebf4a4a5ed987117c4027b9dfa'
 
 
 def get_temp_n_pres(city: str = 'Kharkov'):

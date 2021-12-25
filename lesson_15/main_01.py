@@ -33,7 +33,7 @@
 #
 #
 # base_url = 'http://api.openweathermap.org/data/2.5/weather?'
-# api_key = 'd82759ebf4a4a5ed987117c4027b9dfa'
+# api_key = ''
 #
 #
 # def get_temp_n_pres(city: str='Kharkov'):
